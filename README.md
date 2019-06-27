@@ -1,68 +1,32 @@
 # Meesterproef 2019 @cmda-minor-web · 2018-2019
 
-In de Meesterproef ga je toepassen wat je in de Minor Webdev hebt geleerd. 
-Voor de Meesterproef krijg je een opdracht van een echte opdrachtgever. 
-Je gaat leren hoe je je geleerde kennis en skils kan gebruiken om een oplossing voor een probleem te ontwerpen. Testen, maken, evalueren
-, testen, maken ...
-Je kan kiezen uit verschillende projecten. Hier ga je 5 weken aan werken
+## Inhoud
+- [Introductie](#Introductie)
+- [Docs](#Docs)
+- [Leerdoelen](#Leerdoelen)
 
-Coaches: Joost Faber, Laurens Aarnoudse, Vasilis van Gemert, Janno Kapritsias en Koop Reynders.
+## Introductie
+Voor de meesterproef heb ik gewerkt aan het ontwikkelen van de applicatie 'Linernote'. Ik heb tijdens dit project samengewerkt met [Zekkie](https://github.com/maybuzz) en [Laup](https://github.com/Zekkie).
 
-## Werkwijze
+De afgelopen 5 weken hebben wij gewerkt aan de ontwikkeling van een nieuw media platform waar muziek gerelateerde content (muziek, achtergrond informatie etc.) en social media content van artiesten samenkomen.
 
-Voor de Meesterproef geef je met een eerste en tweede keuze aan welk project je graag wil doen. Daarna wordt door de coaches een indeling gemaakt.  
+Het concept en het design van Linernote zijn afkomstig van Joost de Boo.
 
-In de eerste week krijg je een briefing bij de opdrachtgever en schrijf je een debriefing. 
-Dat is de opdracht en de doelstellingen in eigen woorden beschreven. 
-Daarna ga je iedere week een proof-of-concept bespreken met je opdrachtgever. 
-In week 5 presenteer je het eindresultaat tijdens een expositie. 
-Hiervoor moet je ook een passende presentatie maken.
+## Docs
+- [Prototype](https://github.com/maybuzz/) -> Uiteindelijke prototype
+- [Design rationale](https://github.com/maybuzz/meesterproef-1819#design-rationale.md) -> Gezamelijk design rationale
+- [Product biografie](https://github.com/maybuzz/meesterproef-1819/docs#product-biografie.md) -> `Persoonlijke` product biografie
+- [Reflectie](https://github.com/maybuzz/meesterproef-1819/docs#reflectie.md) -> `Persoonlijke` reflectie
 
-Elke week zijn er 2 coachingsmomenten gepland. 
-Op vrijdag ga je naar de opdrachtgever om je vorderingen te bespreken.
+## Leerdoelen
+| Vak        | Doel           | Uitleg  | Rubric |
+| ------------- |:-------------:| -----:|
+| [WAFS](https://github.com/cmda-minor-web/web-app-from-scratch-1819) | *Data ophalen, manipuleren en tonen* | Tijdens dit project zal ik werken met verschillende API's en deze data gebruiken | [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true) |
+| | *Structuur van de applicatie en de code* | Door te werken met modules word ik "gedwongen" beter na te denken over de structuur van mijn code |
+| [CSS](https://github.com/cmda-minor-web/css-to-the-rescue-1819) | *The student understands the progressive enhancement parts of CSS* | Tijdens dit project zal ik letten op mijn code stijl en zal ik gebruik maken van de BEM methode | [Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit#gid=0) |
+| | *The student understands the broader scope of CSS* | Door mijn nieuwe kennis van CSS (variables, viewport etc) toe te passen kan ik laten zien hoe ik mij heb ontwikkeld |
+| [Performance matters](https://github.com/cmda-minor-web/performance-matters-1819) | *Je begrijpt hoe een Service Worker werkt en kan deze in jouw applicatie op een nuttige wijze implementeren* | Ik wil gebruikers zowel een positieve online- als offline ervaring bieden | [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTO-pc2UMvpT0pUjt6NJeckc5N9E7QvCxEfVJW1JjuM0m_9MM8ra05J0s6br486Rocz5JVMhAX_C37_/pubhtml?gid=0&single=true) |
+|| *Je weet het verschil tussen client side en server side renderen en kan server side rendering toepassen voor het tonen van data uit een API* | Door gebruik te maken van mijn express server en .ejs templates werkt mijn applicatie prima zonder JavaScript |
 
-- Maandag/Dinsdag - Debriefing met een van de coaches.
-- Woensdag/Donderdag - Code review met een van de coaches.
-- Vrijdag - Bespreking met de opdrachtgever.
-
-
-## Criteria en beoordeling
-
-Met de Meesterproef laat je zien wat je hebt geleerd tijdens de minor. 
-Studenten die de vakken hebben gehaald kunnen aan de Meesterproef beginnen.
-
-De Meesterproef bestaat uit 3 projectweken en een eindproject van 5 weken. 
-De 3 projectweken, 
-[PW1](https://github.com/cmda-minor-web/project-1-1819), 
-[PW2](https://github.com/cmda-minor-web/project-2-1819) en 
-[PW3](https://github.com/cmda-minor-web/project-3-1819) tellen mee als AVV.
-
-Het eindproject wordt beoordeeld op een Design rationale, een Product biografie en een reflectie op het eigen niveau. 
-Én of de klant blij is met het gemaakte project.
-
-### Design rationale
-In de Design rationale schrijf je de debriefing, de probleem-definitie, toon je de oplossing en schrijf je een uitleg van de code. 
-De Design rationale is een verantwoording van je ontwerp.
-
-### Product biografie
-In het eindproject doorloop je een iteratief proces. 
-Elke week bespreek je met je opdrachtgever je vorderingen en ideeen. 
-In de Product biografie hou je stap voor stap bij wat je allemaal hebt gedaan. 
-Je schrijft over het proces, de werkwijze en de planning. 
-Ook schetsen, testen, uitprobeersels en inspiratie zijn deel van de Product biografie.
-
-### Reflectie op eigen niveau
-Aan de hand van de vakrubrics reflecteer je systematisch op je werk. 
-In een aantal gesprekken met een coach _reviewen_ we de code van je project. 
-Dit doen we op basis van de rubrics van de verschillende vakken. 
-Zo krijg je een goed beeld van je eigen niveau, mogelijke aandachtspunten en/of aspecten van het design-proces waar je je nog op kan verbeteren.
-
-### Een blije klant
-Voor de klant maak je een (werkend) prototype. Gericht op een bepaalde gebruikersgroep, geschikt voor verschillende apparaten, met echte data, én een goede UX. 
-Jeweettoch. 
-Een blije klant is een goede klant. 
-Soms ontkom je er niet aan dat je een beetje eigenwijs moet doen. 
-Dan doe je juist niet wat de klant wil en probeer je de opdrachtgever te overtuigen met een proof-of-concept. 
-En soms kan het voorkomen dat het proces niet helemaal soepel loopt. 
-Dat hoort erbij en daar leer je van.
-Aan het eind van het project vragen we de klant feedback op het geleverde werk... 
+## License
+[MIT](LICENSE) © [Luna May Johansson](https://github.com/maybuzz)
