@@ -10,7 +10,7 @@ Voor de meesterproef heb ik gewerkt aan het ontwikkelen van de applicatie 'Liner
 
 De afgelopen 5 weken hebben wij gewerkt aan de ontwikkeling van een nieuw media platform waar muziek gerelateerde content (muziek, achtergrond informatie etc.) en social media content van artiesten samenkomen.
 
-Het concept en het design van Linernote zijn afkomstig van Joost de Boo.
+Het concept en het design van [Linernote](http://www.joostdeboo.nl/linernote) zijn afkomstig van [Joost de Boo](http://www.joostdeboo.nl/).
 
 ## Docs
 - [Prototype](https://github.com/maybuzz/) -> Uiteindelijke prototype

@@ -19,7 +19,7 @@ Linernote is een media platform met content van Instagram, Twitter, YouTube, Spo
 - [Conclusie](#Conclusie)
 
 ## Debriefing
-Het concept "Linernote" is bedacht door Joost de Boo. Joost is een grafisch ontwerper en werkte bij een platenlabel toen het idee voor Linernote ontstond. De Linernote app moet zowel een muzikale- als een visuele ervaring worden.
+Het concept "Linernote" is bedacht door [Joost de Boo](http://www.joostdeboo.nl/). Joost is een grafisch ontwerper en werkte bij een platenlabel toen het idee voor Linernote ontstond. De Linernote app moet zowel een muzikale- als een visuele ervaring worden.
 
 ### Wat is Linernote?
 Linernote is een app waarin alle muziek gerelateerde applicaties en social media samenkomen. Het idee is om de beste features en content van deze apps samen te brengen en het zo voor (online) muziek liefhebbers makkelijker te maken om alle online content van artiesten te bekijken.
