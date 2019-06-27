@@ -13,10 +13,9 @@ De afgelopen 5 weken hebben wij gewerkt aan de ontwikkeling van een nieuw media 
 Het concept en het design van [Linernote](http://www.joostdeboo.nl/linernote) zijn afkomstig van [Joost de Boo](http://www.joostdeboo.nl/).
 
 ## Docs
-- [Prototype](https://github.com/maybuzz/) -> Uiteindelijke prototype
 - [Design rationale](https://github.com/maybuzz/meesterproef-1819#design-rationale.md) -> Gezamelijk design rationale
-- [Product biografie](https://github.com/maybuzz/meesterproef-1819/docs#product-biografie.md) -> `Persoonlijke` product biografie
-- [Reflectie](https://github.com/maybuzz/meesterproef-1819/docs#reflectie.md) -> `Persoonlijke` reflectie
+- [Product biografie](https://github.com/maybuzz/meesterproef-1819/blob/master/docs/product-biografie.md) -> `Persoonlijke` product biografie
+- [Reflectie](https://github.com/maybuzz/meesterproef-1819/blob/master/docs/reflectie.md) -> `Persoonlijke` reflectie
 
 ## Leerdoelen
 | Vak        | Doel           | Uitleg  | Rubric |

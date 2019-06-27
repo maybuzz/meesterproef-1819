@@ -1,10 +1,9 @@
 # Linernote product biografie
 
 ## Samenvatting
-De afgelopen weken heb ik mij, samen met Laup, op de frontend van de Linernote applicatie gefocust. Zekkie heeft zich gefocust op de backend. Er is tijdens dit project naar mijn idee lang onderzoek gedaan naar mogelijkheden. Ik heb mezelf op verschillende manieren moeten pushen
+De afgelopen weken heb ik mij, samen met Laup, op de frontend van de Linernote applicatie gefocust. Zekkie heeft zich gefocust op de backend. Er is tijdens dit project naar mijn idee lang onderzoek gedaan naar mogelijkheden. Ik heb mezelf op verschillende manieren moeten pushen. Lees hier meer over in mijn [reflectie](#Reflectie).
 
 ## Inhoud
-- [Introductie](#Introductie)
 - [Proces](#Proces)
   - [Week 1](#Week-1)
   - [Week 2](#Week-2)
@@ -13,9 +12,6 @@ De afgelopen weken heb ik mij, samen met Laup, op de frontend van de Linernote a
   - [Week 5](#Week-5)
 - [Leerdoelen](#Leerdoelen)
   - [Reflectie](#Reflectie)
-
-
-## Introductie
 
 
 ## Proces
@@ -84,7 +80,7 @@ Deze week hebben we Joost weer gezien om de laatste bevindingen te delen.
 Over het algemeen ben in tevreden over het behalen van mijn leerdoelen. Helaas heb ik wegens complicaties en tijdgebrek de Service worker niet meer kunnen implementeren in het eindproduct.
 
 | Vak        | Doel           | Uitleg  | Rubric |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| -----:|-----:|
 | [WAFS](https://github.com/cmda-minor-web/web-app-from-scratch-1819) | *Data ophalen, manipuleren en tonen* | Tijdens dit project zal ik werken met verschillende API's en deze data gebruiken | [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true) |
 |    | *Structuur van de applicatie en de code* | Door te werken met modules word ik "gedwongen" beter na te denken over de structuur van mijn code |    |
 | [CSS](https://github.com/cmda-minor-web/css-to-the-rescue-1819) | *The student understands the progressive enhancement parts of CSS* | Tijdens dit project zal ik letten op mijn code stijl en zal ik gebruik maken van de BEM methode | [Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit#gid=0) |
@@ -92,7 +88,13 @@ Over het algemeen ben in tevreden over het behalen van mijn leerdoelen. Helaas h
 | [Performance matters](https://github.com/cmda-minor-web/performance-matters-1819) | *Je begrijpt hoe een Service Worker werkt en kan deze in jouw applicatie op een nuttige wijze implementeren* | Ik wil gebruikers zowel een positieve online- als offline ervaring bieden | [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTO-pc2UMvpT0pUjt6NJeckc5N9E7QvCxEfVJW1JjuM0m_9MM8ra05J0s6br486Rocz5JVMhAX_C37_/pubhtml?gid=0&single=true) |
 
 ### Reflectie
+De afgelopen 5 weken zijn voor mij op veel punten leerzaam geweest. Ik heb veel geleerd over mezelf als ontwerper en als developer.
 
+Als ontwerper heb ik geleerd dat ik mij naar bepaalde mensen (opdrachtgevers, coaches en teamgenoten) meer en/of duidelijker uit moet spreken. Als ik duidelijker zou communiceren wat ik denk en/of verwacht van iets of iemand, hoef ik mezelf niet zo gek te maken. Af en toe dit project heb ik mij een beetje verloren gevoeld. Ik weet niet of dat komt door miscommunicatie of dat de opdracht mij gewoon niet ligt.
+
+Om eerlijk te zijn had ik veel anders gedaan. Te beginnen met de keuze van het project. Ook had ik het liever alleen gedaan. Dit had mij veel miscommunicaties gescheelt. Over het algemeen is de samenwerking wat moeizaam verlopen. Er is weinig echt samengewerkt en er is telaat ingegrepen, wat uiteindelijk heeft geresulteerd in een eindproduct dat nog niet klopt. Ik ben wat teleurgesteld in het eindproduct en het proces. Ook baal ik er van dat ik niet aan al mijn leerdoelen ben toegekomen. Dit is gebeurd omdat er elke week nieuwe onduidelijkheden ontstonden uit het niets en er vanuit stres gehandeld werd, in plaats van rustig en redelijk nadenken.
+
+Ik heb zoveel meer in mijn hoofd dan er nu uiteindelijk te zien is.
 
 ## License
 [MIT](LICENSE) © [Luna May Johansson](https://github.com/maybuzz)
