@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include partials/head.ejs %>
+
+<body>
+  <header class="artist-header">
+    <div class="artist-img-container">
+      <img class="artist-header-img" src="<%= data.images[0].url %>">
+    </div>
+
+    <div class="siema">
+      <div class="artist-header-name">
+        <h1 class="artist-title"><%= data.name %></h1>
+        <ul class="artist-header-list">
+          <li class="follow"><a class="btn btn-follow" href="#">follow</a></li>
+        </ul>
+      </div>
+      <div class="artist-header-info">
+        <h2 class="artist-title2">Top tracks</h2>
+        <ol class="artist-header-list">
+          <% for (let i = 0; i < 5; i++) { %>
+            <li class="artist-track-item"><a class="artist-track" href="<%= tracks[i].external_urls.spotify %>"><%= tracks[i].name %></a></li>
+          <% } %>
+        </ol>
+      </div>
+      <div class="artist-header-info artist-wiki">
+        <h2 class="artist-title2">About</h2>
+          <p class="artist-wiki-text"><%= wiki %></p>
+      </div>
+    </div>
+
+    <h2 class="padding related-title">Fans also like</h2>
+    <% include partials/related.ejs %>
+
+  </header>
+
+  <main class="artist-main">
+
+    <% include partials/artist-playlists.ejs %>
+
+    <% for (let i = 0; i < 3; i++) { %>
+      <section class="artist-nyt">
+        <a class="article" href="<%= nyt[i].web_url %>">
+
+          <h3 class="artist-nyt-title"><%= nyt[i].headline.main %></h3>
+          <p class="artist-nyt-date"><%= new Date(nyt[i].pub_date) %></p>
+          <p class="artist-nyt-text"><%= nyt[i].lead_paragraph %></p>
+
+          <img class="artist-nyt-img" src="https://static01.nyt.com/<%= nyt[i].multimedia[0].url %>" alt="<%= nyt[i].multimedia[0].type %>">
+
+        </a>
+      </section>
+    <% } %>
+
+    <% if(tickets.upcomingEvents._total != 0) { %>
+      <% include partials/artist-ticketmaster.ejs %>
+    <% } %>
+
+  </main>
+
+  <% include partials/main-nav.ejs %>
+
+  <script src="/js/carrousel.js"></script>
+  <script src="/js/siema.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <% include partials/tail.ejs %>
+
+</body>
+</html>
