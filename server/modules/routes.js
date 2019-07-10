@@ -15,7 +15,6 @@ router.post('/search', searchArtist)
 router.get('/artist/:id', getArtist)
 router.get('/profile', profile)
 router.get('/offline', offline)
-router.get('/*', error)
 
 function login(req,res){
   res.render('login')
@@ -123,9 +122,6 @@ function offline(req, res){
   res.render('offline')
 }
 
-function error(req, res){
-  res.render('error')
-}
 
 // const filterOUt = attractions._embedded.attractions.filter(item=>item.name.trim().toLowerCase()===data.name.trim().toLowerCase())
 // req.session.artist = {
