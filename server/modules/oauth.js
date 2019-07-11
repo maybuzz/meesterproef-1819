@@ -4,13 +4,13 @@ const querystring   = require('querystring')
 const router        = express.Router()
 require("dotenv/config")
 
-// let redirect_uri =
-//   process.env.REDIRECT_URI ||
-//   'http://localhost:3000/spotify/callback'
-
 let redirect_uri =
   process.env.REDIRECT_URI ||
-  'https://linernotez.herokuapp.com/spotify/callback'
+  'http://localhost:3000/spotify/callback'
+
+// let redirect_uri =
+//   process.env.REDIRECT_URI ||
+//   'https://linernotez.herokuapp.com/spotify/callback'
 
 router.get('/spotify/login', function(req, res) {
   res.redirect('https://accounts.spotify.com/authorize?' +
@@ -38,18 +38,18 @@ router.get('/spotify/callback', function(req, res) {
     },
     json: true
   }
-  request.post(authOptions, function(error, response, body) {
-    var access_token = body.access_token
-    let uri = process.env.FRONTEND_URI || 'https://linernotez.herokuapp.com/home'
-    req.session.acces_token = access_token
-    res.redirect(uri)
-  })
   // request.post(authOptions, function(error, response, body) {
   //   var access_token = body.access_token
-  //   let uri = process.env.FRONTEND_URI || 'http://localhost:3000/home'
+  //   let uri = process.env.FRONTEND_URI || 'https://linernotez.herokuapp.com/home'
   //   req.session.acces_token = access_token
   //   res.redirect(uri)
   // })
+  request.post(authOptions, function(error, response, body) {
+    var access_token = body.access_token
+    let uri = process.env.FRONTEND_URI || 'http://localhost:3000/home'
+    req.session.acces_token = access_token
+    res.redirect(uri)
+  })
 })
 
 module.exports = router

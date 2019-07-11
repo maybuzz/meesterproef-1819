@@ -16,6 +16,10 @@ function getData(url){
         .then(response=> response.json())
 }
 
+function filterChar(string){
+  return string.replace(/[|&;%@"<>()+,!?¡]/g,"")
+}
+
 function replaceSpace(string){
     return string.replace(/ /g,"_")
 }
@@ -32,4 +36,4 @@ function onlyUnique(value, index, self) {
     return self.indexOf(value) === index
 }
 
-module.exports = {getDataWithToken, getData, replaceSpace, replaceSpacePlus, filterOutChar, onlyUnique}
+module.exports = {getDataWithToken, getData, filterChar, replaceSpace, replaceSpacePlus, filterOutChar, onlyUnique}

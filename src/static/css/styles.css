@@ -20,6 +20,7 @@
     --main-bg-color: #171717;
     --nav: #282828;
     --gradient: linear-gradient(#330037, #171717);
+    --color-gradient: linear-gradient(to bottom, rgba(51,0,55,1) 0%,rgba(23,23,23,1) 35%,#171717 100%);
     --second-bg-color: #313131;
     --main-font-color: #fff;
     --color-dark: #000;
@@ -42,13 +43,20 @@
   display: none;
 }
 
+html {
+  background-color: var(--main-bg-color);
+}
+
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(51,0,55,1) 0%,rgba(23,23,23,1) 35%,#171717 100%);
   font-size: 12px;
   font-family: 'foundersReg', sans-serif;
   color: var(--main-font-color);
+}
+
+.body-backgr {
+  background: var(--color-gradient);
 }
 
 h1, h2 {
@@ -130,8 +138,9 @@ h2 {
   padding-top: .5rem;
 }
 /* end following */
-
-/* feed */
+.feed-title {
+  margin: 1rem .75rem;
+}
 /* end feed */
 
 /* profile */
@@ -251,6 +260,10 @@ h2 {
   background-color: var(--color-btn-hover);
 }
 
+.nav-logo {
+  height: 1.9rem;
+}
+
 nav svg{
   width: 2rem;
   background: transparent;
@@ -324,6 +337,38 @@ svg > path{
 
 /* artist */
 /* header */
+.back {
+  z-index: 1000;
+  position: absolute;
+  height: 3rem;
+  margin-top: -3.5rem;
+  margin-left: -1.5rem;
+}
+
+.back2 {
+  height: 3rem;
+  margin-left: -1rem;
+  width: 2.5rem;
+}
+
+.next-btns {
+  text-align: center;
+}
+
+.next-btn {
+  height: 2.2rem;
+  position: relative;
+}
+
+.next-btn:hover, .next-btn:focus, .back:hover, .back:focus, .back2:hover, .back2:focus {
+  fill: var(--color-btn-hover);
+}
+
+.arrow {
+  transform: rotate(230deg);
+  margin-top: 3rem;
+}
+
 .artist-header {
   background-repeat: no-repeat;
   background-position: center center;
@@ -367,10 +412,6 @@ svg > path{
   margin-bottom: .5rem;
 }
 
-.siema {
-  margin-bottom: 2rem;
-}
-
 ol[class="artist-header-list"] li {
   list-style-type: decimal;
   text-align: left;
@@ -394,6 +435,7 @@ ol[class="artist-header-list"] li {
 .artist-wiki-text {
   font-size: 1rem;
   line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* end header */
@@ -573,48 +615,6 @@ ol[class="artist-header-list"] li {
 }
 /* end ticketmaster */
 
-/* soundcloud */
-.soundcloud {
-  grid-area: soundcloud;
-}
-
-.soundcloud-header {
-  border-bottom: solid 1px #fff;
-  padding-bottom: 1rem;
-  margin-bottom: .5rem;
-}
-
-.soundcloud-header-img {
-  border: solid 1px #fff;
-  border-radius: 100px;
-  width: 15%;
-  display: inline-block;
-  margin-bottom: -2rem;
-}
-
-.soundcloud-header-title {
-  display: inline-block;
-  color: var(--main-font-color);
-}
-
-.soundcloud-header-p2 {
-  margin-left: 4.75rem;
-}
-
-.soundcloud-header-date, .soundcloud-header-views {
-  color: var(--main-font-color);
-  display: inline;
-}
-
-.soundcloud-title {
-  margin: .5rem 0;
-}
-
-.soundcloud-img {
-  width: 100%;
-}
-/* end soundcloud */
-
 /* nyt */
 .artist-nyt {
   background-color: #fff;
@@ -625,9 +625,9 @@ ol[class="artist-header-list"] li {
 }
 
 .artist-nyt:hover, .artist-nyt:focus {
-  transform: scale(1.01);
-  transition: .25s;
-  box-shadow: -2px 0px 10px 2px #aaa;
+  transform: scale(1.005);
+  transition: ease-out .25s;
+  box-shadow: 1px 0px 5px 1px #000;
 }
 
 .artist-nyt-title {
@@ -656,6 +656,35 @@ ol[class="artist-header-list"] li {
 
 /* end artist */
 
+/* error */
+.error {
+  text-align: center;
+  position: relative;
+  margin: 20% auto;
+}
+
+.error-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.err {
+  width: 80%;
+  display: block;
+  margin: 2.5rem auto;
+}
+
+.error-text {
+  margin: 1rem 0;
+}
+
+.offline {
+  width: 80%;
+  display: block;
+  margin: 2.5rem auto;
+}
+/* end error */
+
 /* states */
 .visible {
   opacity: 1;
@@ -666,12 +695,16 @@ ol[class="artist-header-list"] li {
   margin: 2rem 2rem;
 }
 
-.start-title, .start-subtitle {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  color: #272727;
+.start-subtitle {
+  margin: 0 1.5rem 0 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #444;
 }
 
 .start-title {
-  margin: 3rem 5rem;
+  margin: 5.5rem 2rem 1rem 2rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #777;
 }

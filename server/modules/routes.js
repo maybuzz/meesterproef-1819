@@ -4,6 +4,7 @@ const router    = express.Router()
 const {getDataWithToken} = require('./helper')
 const {getData} = require('./helper')
 const {filterOutChar} = require('./helper')
+const {filterChar} = require('./helper')
 const {replaceSpace} = require('./helper')
 const {replaceSpacePlus} = require('./helper')
 const {onlyUnique} = require('./helper')
@@ -15,6 +16,7 @@ router.post('/search', searchArtist)
 router.get('/artist/:id', getArtist)
 router.get('/profile', profile)
 router.get('/offline', offline)
+router.get('/*', error)
 
 function login(req,res){
   res.render('login')
@@ -91,6 +93,8 @@ async function getArtist(req, res) {
   const related = await getDataWithToken(config_related)
   const albums = await getDataWithToken(config_albums)
 
+  console.log(data);
+
   if (data === {}) {
     res.render('login')
   }
@@ -98,10 +102,14 @@ async function getArtist(req, res) {
   const attractions_url = `https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${filterOutChar(data.name)}&countryCode=NL&apikey=${process.env.TICKETMASTER_CONSUMER_KEY}`
   const attractions = await getData(attractions_url)
 
-  const wiki_url = `https://en.wikipedia.org/api/rest_v1/page/summary/${replaceSpace(data.name)}`
+  const artist_name = filterChar(data.name)
+  console.log(artist_name);
+  const wiki_url = `https://en.wikipedia.org/api/rest_v1/page/summary/${replaceSpace(artist_name)}`
   const wiki_data = await getData(wiki_url)
 
-  const nyt_url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${replaceSpacePlus(data.name)}&fq=source:("The New York Times")&api-key=${process.env.NYTIMES_API_KEY}`
+  console.log("wiki", wiki_data)
+
+  const nyt_url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${replaceSpacePlus(artist_name)}&fq=source:("The New York Times")&api-key=${process.env.NYTIMES_API_KEY}`
   const nyt_data = await getData(nyt_url)
 
   // console.log("nyt", nyt_data.response.docs[0])
@@ -112,7 +120,7 @@ async function getArtist(req, res) {
     related: related,
     albums: albums.items,
     tickets: attractions._embedded.attractions[0],
-    wiki: wiki_data.extract,
+    wiki: wiki_data,
     nyt: nyt_data.response.docs
     // youtube: urls
   })
@@ -120,6 +128,10 @@ async function getArtist(req, res) {
 
 function offline(req, res){
   res.render('offline')
+}
+
+function error(req, res){
+  res.render('error')
 }
 
 

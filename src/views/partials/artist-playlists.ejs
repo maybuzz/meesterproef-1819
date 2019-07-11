@@ -1,13 +1,15 @@
-<div id="albums" class="albums">
-  <h2 class="padding related-title">Albums you will enjoy</h2>
-  <ul class="albums-list">
-    <% albums.forEach((album)=> { %>
-      <li class="albums-item">
-        <a class="album-link" href="<%= album.external_urls.spotify %>">
-          <img class="albums-item-img" src="<%= album.images[0].url %>">
-          <h4 class="albums-name"><%= album.name %></h4>
-        </a>
-      </li>
-    <% }) %>
-  </ul>
-</div>
+<% if(albums.length > 0){ %>
+  <div id="albums" class="albums">
+    <h2 class="padding related-title">Albums you will enjoy</h2>
+    <ul class="albums-list">
+      <% albums.forEach((album)=> { %>
+        <li class="albums-item">
+          <a class="album-link" href="<%= album.external_urls.spotify %>">
+            <img class="albums-item-img" src="<%= album.images[0].url %>">
+            <h4 class="albums-name"><%= album.name %></h4>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+<% } %>

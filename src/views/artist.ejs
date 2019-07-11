@@ -5,29 +5,48 @@
 
 <body>
   <header class="artist-header">
+
     <div class="artist-img-container">
       <img class="artist-header-img" src="<%= data.images[0].url %>">
     </div>
 
+    <a href="/search">
+      <svg class="back" height='100px' width='100px'  fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><path d="M60.7246094,72.9492188c-0.3837891,0-0.7675781-0.1464844-1.0605469-0.4394531L38.2148438,51.0605469   c-0.5859375-0.5859375-0.5859375-1.5351562,0-2.1210938l21.4492188-21.4492188   c0.5859375-0.5859375,1.5351562-0.5859375,2.1210938,0s0.5859375,1.5351562,0,2.1210938L41.3964844,50l20.3886719,20.3886719   c0.5859375,0.5859375,0.5859375,1.5351562,0,2.1210938C61.4921875,72.8027344,61.1083984,72.9492188,60.7246094,72.9492188z"></path></g></svg>
+    </a>
+
     <div class="siema">
-      <div class="artist-header-name">
+      <div id="artist-name" class="artist-header-name">
         <h1 class="artist-title"><%= data.name %></h1>
         <ul class="artist-header-list">
           <li class="follow"><a class="btn btn-follow" href="#">follow</a></li>
         </ul>
       </div>
-      <div class="artist-header-info">
-        <h2 class="artist-title2">Top tracks</h2>
-        <ol class="artist-header-list">
-          <% for (let i = 0; i < 5; i++) { %>
-            <li class="artist-track-item"><a class="artist-track" href="<%= tracks[i].external_urls.spotify %>"><%= tracks[i].name %></a></li>
-          <% } %>
-        </ol>
-      </div>
-      <div class="artist-header-info artist-wiki">
-        <h2 class="artist-title2">About</h2>
-          <p class="artist-wiki-text"><%= wiki %></p>
-      </div>
+      <% if(tracks.length > 0){ %>
+        <div id="artist-tracks" class="artist-header-info">
+          <h2 class="artist-title2">Top tracks</h2>
+          <ol class="artist-header-list">
+            <% for (let i = 0; i < 5; i++) { %>
+              <li class="artist-track-item"><a class="artist-track" href="<%= tracks[i].external_urls.spotify %>"><%= tracks[i].name %></a></li>
+            <% } %>
+          </ol>
+        </div>
+      <% } %>
+
+      <% if(wiki !== 0){ %>
+        <div id="artist-info" class="artist-header-info artist-wiki">
+          <h2 class="artist-title2">About</h2>
+            <p class="artist-wiki-text"><%= wiki.extract.slice(0,300) %>...</p>
+            <a class="btn btn-follow" href="<%= wiki.content_urls.desktop.page %>">full bio</a>
+        </div>
+      <% } %>
+    </div>
+    <div class="next-btns">
+      <a class="prev" href="#">
+        <svg class="next-btn" height='100px' width='100px'  fill="#555555" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><path d="M60.7246094,72.9492188c-0.3837891,0-0.7675781-0.1464844-1.0605469-0.4394531L38.2148438,51.0605469   c-0.5859375-0.5859375-0.5859375-1.5351562,0-2.1210938l21.4492188-21.4492188   c0.5859375-0.5859375,1.5351562-0.5859375,2.1210938,0s0.5859375,1.5351562,0,2.1210938L41.3964844,50l20.3886719,20.3886719   c0.5859375,0.5859375,0.5859375,1.5351562,0,2.1210938C61.4921875,72.8027344,61.1083984,72.9492188,60.7246094,72.9492188z"></path></g></svg>
+      </a>
+      <a class="next" href="#">
+        <svg class="next-btn" height='100px' width='100px'  fill="#555555" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><path d="M39.2753906,72.9492188c-0.3837891,0-0.7675781-0.1464844-1.0605469-0.4394531   c-0.5859375-0.5859375-0.5859375-1.5351562,0-2.1210938L58.6035156,50L38.2148438,29.6113281   c-0.5859375-0.5859375-0.5859375-1.5351562,0-2.1210938s1.5351562-0.5859375,2.1210938,0l21.4492188,21.4492188   c0.5859375,0.5859375,0.5859375,1.5351562,0,2.1210938L40.3359375,72.5097656   C40.0429688,72.8027344,39.6591797,72.9492188,39.2753906,72.9492188z"></path></g></svg>
+      </a>
     </div>
 
     <h2 class="padding related-title">Fans also like</h2>
@@ -39,18 +58,23 @@
 
     <% include partials/artist-playlists.ejs %>
 
-    <% for (let i = 0; i < 3; i++) { %>
-      <section class="artist-nyt">
-        <a class="article" href="<%= nyt[i].web_url %>">
+    <% if(nyt.length > 0) { %>
+      <% for (let i = 0; i < 3; i++) { %>
+        <section class="artist-nyt">
+          <a class="article" href="<%= nyt[i].web_url %>">
 
-          <h3 class="artist-nyt-title"><%= nyt[i].headline.main %></h3>
-          <p class="artist-nyt-date"><%= new Date(nyt[i].pub_date) %></p>
-          <p class="artist-nyt-text"><%= nyt[i].lead_paragraph %></p>
+            <h3 class="artist-nyt-title"><%= nyt[i].headline.main %></h3>
+            <p class="artist-nyt-date"><%= new Date(nyt[i].pub_date) %></p>
+            <p class="artist-nyt-text"><%= nyt[i].lead_paragraph %></p>
 
-          <img class="artist-nyt-img" src="https://static01.nyt.com/<%= nyt[i].multimedia[0].url %>" alt="<%= nyt[i].multimedia[0].type %>">
-
-        </a>
-      </section>
+              <% if(nyt[i].multimedia.length > 0) { %>
+                <img class="artist-nyt-img" src="https://static01.nyt.com/<%= nyt[i].multimedia[0].url %>" alt="">
+              <% } else { %>
+                <img class="artist-nyt-img" src="https://static01.nyt.com/<%= nyt[i].multimedia.url %>" alt="">
+              <% } %>
+          </a>
+        </section>
+      <% } %>
     <% } %>
 
     <% if(tickets.upcomingEvents._total != 0) { %>
@@ -61,9 +85,8 @@
 
   <% include partials/main-nav.ejs %>
 
-  <script src="/js/carrousel.js"></script>
   <script src="/js/siema.min.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/siema.js"></script>
 
   <% include partials/tail.ejs %>
 
